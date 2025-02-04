@@ -1,0 +1,19 @@
+<section>
+  @defer {
+    <app-deferred-01></app-deferred-01>
+  }
+</section>
+
+<section>
+  @defer (on timer(5000)) {
+    <app-deferred-02></app-deferred-02>
+  } @placeholder {
+    I'm displayed while timer runs.
+  }
+</section>
+
+<section #section3>
+  @defer (on viewport(section3)) {
+    <app-deferred-03></app-deferred-03>
+  }
+</section>

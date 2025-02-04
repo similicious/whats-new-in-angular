@@ -1,0 +1,8 @@
+<h1>SSR Counter</h1>
+
+<button (click)="increase()">Increase</button>
+{{ counter() }}
+
+<hr />
+
+<a [routerLink]="['/', 'ssr', 'no']">To client rendered page</a>
