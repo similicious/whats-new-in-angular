@@ -23,6 +23,20 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'state/observable',
+    loadComponent: () =>
+      import(
+        './topics/part-03-state/components/service-with-an-observable/service-with-an-observable.component'
+      ).then((c) => c.ServiceWithAnObservableComponent),
+  },
+  {
+    path: 'state/signal',
+    loadComponent: () =>
+      import(
+        './topics/part-03-state/components/service-with-a-signal/service-with-a-signal.component'
+      ).then((c) => c.ServiceWithASignalComponent),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./home/home.component').then((c) => c.HomeComponent),

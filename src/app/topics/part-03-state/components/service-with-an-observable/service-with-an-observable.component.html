@@ -1,0 +1,6 @@
+@let todo = (serviceWithAnObservableService.todo$ | async) ?? undefined;
+
+<app-todo
+  [todo]="todo"
+  (nextTodoRequested)="serviceWithAnObservableService.nextTodo()"
+></app-todo>
