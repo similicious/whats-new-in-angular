@@ -1,0 +1,4 @@
+<app-todo
+  [todo]="signalStoreStore.todo?.()"
+  (nextTodoRequested)="signalStoreStore.nextTodo()"
+></app-todo>

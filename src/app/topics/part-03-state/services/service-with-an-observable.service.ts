@@ -11,7 +11,7 @@ export class ServiceWithAnObservableService {
 
   public todo$ = this.todoId$.pipe(
     filter((id) => !!id),
-    switchMap((id) => this.todoRepositoryService.getTodoById(id)),
+    switchMap((id) => this.todoRepositoryService.getTodoById$(id)),
   );
 
   public nextTodo() {

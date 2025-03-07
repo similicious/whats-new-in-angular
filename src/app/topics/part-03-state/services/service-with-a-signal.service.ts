@@ -9,7 +9,6 @@ export class ServiceWithASignalService {
   private todoId = signal<number>(1);
   public todo = signal<Todo | undefined>(undefined);
 
-  // ?? https://justangular.com/blog/building-computed-async-for-signals-in-angular
   private getTodo = effect(() => {
     this.todoRepositoryService
       .getTodoById$(this.todoId())

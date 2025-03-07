@@ -37,6 +37,20 @@ export const routes: Routes = [
       ).then((c) => c.ServiceWithASignalComponent),
   },
   {
+    path: 'state/signal-store',
+    loadComponent: () =>
+      import(
+        './topics/part-03-state/components/signal-store/signal-store.component'
+      ).then((c) => c.SignalStoreComponent),
+  },
+  {
+    path: 'state/ngrx',
+    loadComponent: () =>
+      import('./topics/part-03-state/components/ngrx/ngrx.component').then(
+        (c) => c.NgrxComponent,
+      ),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./home/home.component').then((c) => c.HomeComponent),
