@@ -12,10 +12,4 @@ export class TodoRepositoryService {
       `https://jsonplaceholder.typicode.com/todos/${id}`,
     );
   }
-
-  getTodoById(id: number): Promise<Todo> {
-    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`).then(
-      (res) => res.json(),
-    );
-  }
 }
